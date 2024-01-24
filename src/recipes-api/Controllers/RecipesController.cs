@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace recipes_api.Controllers;
 
@@ -26,7 +27,7 @@ public class RecipesController : ControllerBase
     public IActionResult Get()
     {
         // iniciando o projeto
-        throw new NotImplementedException();
+        return Ok(_service.GetRecipes());
     }
 
     // 2 - Sua aplicação deve ter o endpoint GET /recipe/:name
